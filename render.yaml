@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: sathwik-ganji-portfolio
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
