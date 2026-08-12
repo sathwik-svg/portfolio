@@ -124,3 +124,39 @@ if (contactForm) {
     }, 800);
   });
 }
+
+
+// Automatic GitHub Projects
+fetch("https://api.github.com/users/sathwik-svg/repos?sort=updated&per_page=100")
+  .then(response => response.json())
+  .then(repos => {
+    const container = document.getElementById("github-projects");
+    if (!container) return;
+
+    container.innerHTML = repos
+      .filter(repo => !repo.fork)
+      .map(repo => `
+        <div class="project-card">
+          <div class="project-info">
+            <h2 class="project-title">${repo.name}</h2>
+            <p class="project-desc">
+              ${repo.description || "Cloud, DevOps, software engineering and technology project by Sathwik Ganji."}
+            </p>
+            <div class="project-tags">
+              <span class="tag">${repo.language || "GitHub"}</span>
+              <span class="tag">⭐ ${repo.stargazers_count}</span>
+            </div>
+            <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" class="btn-primary">
+              View on GitHub →
+            </a>
+          </div>
+        </div>
+      `)
+      .join("");
+  })
+  .catch(() => {
+    const container = document.getElementById("github-projects");
+    if (container) {
+      container.innerHTML = "<p>GitHub projects could not be loaded.</p>";
+    }
+  });
