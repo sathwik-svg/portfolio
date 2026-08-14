@@ -4,38 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Projects | Sathwik Ganji</title>
-<meta name="description" content="Sathwik Ganji's Cloud, DevOps and B.Tech Computer Science projects.">
-<meta name="author" content="Sathwik Ganji">
-<meta name="robots" content="index,follow">
+<meta name="description" content="Sathwik Ganji's Cloud, DevOps, AWS and B.Tech engineering projects.">
 <link rel="stylesheet" href="assets/css/styles.css">
 <style>
-.projects-intro{text-align:center;max-width:850px;margin:0 auto 55px}
-.projects-intro h1{font-size:clamp(2.5rem,6vw,5rem);margin-bottom:15px}
-.projects-intro p{line-height:1.8;opacity:.75}
-.project-columns{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
-.project-column{padding:28px;border:1px solid rgba(120,180,255,.18);border-radius:24px;background:rgba(255,255,255,.025);position:relative;overflow:hidden}
-.project-column:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(70,140,255,.08);filter:blur(50px);top:-80px;right:-70px;animation:orb 6s ease-in-out infinite}
-.project-heading{position:relative;display:flex;align-items:center;gap:14px;margin-bottom:25px}
-.project-heading-icon{font-size:2rem}
-.project-heading h2{margin:0;font-size:1.5rem}
-.project-heading p{margin:5px 0 0;opacity:.6;font-size:.85rem}
-.project-card{position:relative;margin-bottom:18px;padding:22px;border:1px solid rgba(120,180,255,.14);border-radius:18px;background:rgba(255,255,255,.035);transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease;animation:fadeUp .7s ease both}
-.project-card:hover{transform:translateY(-8px) rotateX(1deg);border-color:rgba(120,180,255,.5);box-shadow:0 20px 45px rgba(40,100,220,.15)}
-.project-card h3{margin:0 0 9px;font-size:1.08rem}
-.project-card p{margin:0 0 15px;line-height:1.65;font-size:.9rem;opacity:.72}
-.tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:17px}
-.tag{padding:5px 9px;border-radius:20px;font-size:.72rem;border:1px solid rgba(120,180,255,.18);background:rgba(255,255,255,.035)}
-.project-actions{display:flex;gap:9px;flex-wrap:wrap}
-.project-actions a{padding:8px 12px;border-radius:8px;text-decoration:none;font-size:.78rem;font-weight:600;border:1px solid rgba(120,180,255,.25);transition:.25s}
-.project-actions a:hover{transform:translateY(-2px);border-color:rgba(120,180,255,.7)}
-.cloud{border-top:2px solid rgba(80,160,255,.55)}
-.degree{border-top:2px solid rgba(150,120,255,.5)}
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-@keyframes orb{0%,100%{transform:translate(0,0)}50%{transform:translate(-25px,20px)}}
-@media(max-width:850px){.project-columns{grid-template-columns:1fr}.project-column{padding:20px}}
+.projects-intro{text-align:center;max-width:800px;margin:0 auto 55px}.projects-intro p{line-height:1.8;opacity:.75}.project-columns{display:grid;grid-template-columns:1fr 1fr;gap:32px}.project-section{padding:30px;border:1px solid rgba(120,180,255,.18);border-radius:24px;background:rgba(255,255,255,.025);animation:fadeUp .8s ease both}.project-section:nth-child(2){animation-delay:.2s}.section-heading{display:flex;align-items:center;gap:12px;margin-bottom:25px}.section-icon{font-size:2rem}.section-heading h2{margin:0}.section-heading p{margin:5px 0 0;opacity:.6;font-size:.85rem}.project-card{padding:22px;margin-bottom:18px;border:1px solid rgba(120,180,255,.14);border-radius:17px;background:rgba(255,255,255,.025);transition:.35s;position:relative;overflow:hidden}.project-card:before{content:"";position:absolute;top:0;left:-100%;width:100%;height:1px;background:linear-gradient(90deg,transparent,#65a8ff,transparent);animation:scan 4s linear infinite}.project-card:hover{transform:translateY(-7px) rotateX(2deg);border-color:rgba(120,180,255,.45);box-shadow:0 18px 45px rgba(40,100,200,.14)}.project-card h3{margin:0 0 9px;font-size:1.1rem}.project-card p{font-size:.88rem;line-height:1.65;opacity:.7;margin:0 0 15px}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:17px}.tag{font-size:.72rem;padding:5px 9px;border-radius:20px;border:1px solid rgba(120,180,255,.2);opacity:.85}.buttons{display:flex;gap:9px;flex-wrap:wrap}.btn{display:inline-block;padding:8px 13px;border-radius:8px;text-decoration:none;font-size:.78rem;font-weight:600;border:1px solid rgba(120,180,255,.25);transition:.25s}.btn:hover{transform:translateY(-2px);box-shadow:0 7px 20px rgba(60,120,220,.18)}.demo{background:rgba(80,150,255,.13)}.all-projects{text-align:center;margin-top:45px}.all-projects a{display:inline-block;padding:14px 25px;border-radius:12px;text-decoration:none;border:1px solid rgba(120,180,255,.3);font-weight:700;transition:.3s}.all-projects a:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(60,120,220,.18)}@keyframes fadeUp{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}@keyframes scan{0%{left:-100%}50%,100%{left:100%}}@media(max-width:850px){.project-columns{grid-template-columns:1fr}.project-section{padding:22px}}
 </style>
 </head>
-
 <body>
 
 <nav class="navbar" id="navbar">
@@ -58,168 +32,154 @@
 <main class="page-main">
 <div class="page-container">
 
-<section class="projects-intro">
-<h1>Projects.</h1>
-<p>
-A portfolio of cloud infrastructure, DevOps automation, software engineering
-and B.Tech Computer Science projects — built, documented and deployed through
-hands-on learning.
-</p>
-</section>
+<div class="projects-intro">
+<h1 class="page-title">Projects.</h1>
+<p>Building practical software, cloud infrastructure and engineering solutions through academic work and independent Cloud & DevOps projects.</p>
+</div>
 
 <div class="project-columns">
 
-<!-- CLOUD / DEVOPS -->
-<section class="project-column cloud">
-<div class="project-heading">
-<div class="project-heading-icon">☁️</div>
-<div>
-<h2>Cloud & DevOps</h2>
-<p>Infrastructure • Automation • Deployment</p>
-</div>
+<section class="project-section">
+<div class="section-heading">
+<div class="section-icon">☁️</div>
+<div><h2>Cloud & DevOps</h2><p>Career-focused engineering projects</p></div>
 </div>
 
-<article class="project-card">
-<h3>Kubernetes Production Application</h3>
-<p>Production-style Kubernetes deployment using namespaces, ConfigMaps, Secrets, persistent storage, PostgreSQL, Redis and services.</p>
-<div class="tags"><span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span></div>
-<div class="project-actions"><a href="https://github.com/sathwik-svg/project-12-kubernetes-production" target="_blank">GitHub →</a></div>
-</article>
-
-<article class="project-card">
-<h3>AWS Kubernetes CI/CD</h3>
-<p>Cloud-focused CI/CD project combining containerization, Kubernetes manifests and automated deployment workflows.</p>
-<div class="tags"><span class="tag">AWS</span><span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span></div>
-<div class="project-actions"><a href="https://github.com/sathwik-svg" target="_blank">GitHub →</a></div>
-</article>
-
-<article class="project-card">
-<h3>Kubernetes Helm & Application Packaging</h3>
-<p>Reusable Helm chart project covering application packaging, chart validation and Kubernetes deployment.</p>
-<div class="tags"><span class="tag">Helm</span><span class="tag">Kubernetes</span><span class="tag">YAML</span><span class="tag">DevOps</span></div>
-<div class="project-actions"><a href="https://github.com/sathwik-svg" target="_blank">GitHub →</a></div>
-</article>
-
-<article class="project-card">
-<h3>Self-Hosted Monitoring Dashboard</h3>
-<p>Monitoring stack using Prometheus, Grafana and Node Exporter with Docker Compose on Ubuntu Server.</p>
-<div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Docker</span><span class="tag">Linux</span></div>
-<div class="project-actions"><a href="https://github.com/sathwik-svg" target="_blank">GitHub →</a></div>
-</article>
-
-<article class="project-card">
-<h3>AWS S3 Static Website Hosting</h3>
-<p>Infrastructure-as-code project for deploying a static website using AWS S3 and Terraform.</p>
-<div class="tags"><span class="tag">AWS S3</span><span class="tag">Terraform</span><span class="tag">IaC</span></div>
-<div class="project-actions"><a href="https://github.com/sathwik-svg" target="_blank">GitHub →</a></div>
-</article>
-
-<article class="project-card">
+<div class="project-card">
 <h3>AWS Serverless Lambda</h3>
-<p>Serverless application project exploring AWS Lambda architecture and cloud-native execution.</p>
-<div class="tags"><span class="tag">AWS Lambda</span><span class="tag">Serverless</span><span class="tag">Cloud</span></div>
-<div class="project-actions"><a href="https://github.com/sathwik-svg" target="_blank">GitHub →</a></div>
-</article>
+<p>Python-based serverless application prepared for AWS Lambda and API Gateway.</p>
+<div class="tags"><span class="tag">AWS</span><span class="tag">Lambda</span><span class="tag">Python</span><span class="tag">API Gateway</span></div>
+<div class="buttons"><a class="btn" href="https://github.com/sathwik-svg/aws-serverless-lambda" target="_blank">GitHub →</a></div>
+</div>
 
-<article class="project-card">
-<h3>Docker Compose Multi-Container Application</h3>
-<p>Multi-service application architecture using Python, Redis, PostgreSQL and Nginx.</p>
-<div class="tags"><span class="tag">Docker</span><span class="tag">Compose</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Nginx</span></div>
-<div class="project-actions"><a href="https://github.com/sathwik-svg" target="_blank">GitHub →</a></div>
-</article>
+<div class="project-card">
+<h3>AWS S3 Static Website</h3>
+<p>Infrastructure-focused static website deployment using AWS S3 and cloud technologies.</p>
+<div class="tags"><span class="tag">AWS</span><span class="tag">S3</span><span class="tag">Terraform</span></div>
+<div class="buttons"><a class="btn" href="https://github.com/sathwik-svg/aws-s3-static-website" target="_blank">GitHub →</a></div>
+</div>
+
+<div class="project-card">
+<h3>Terraform Local Project</h3>
+<p>Infrastructure-as-Code project demonstrating Terraform configuration and reproducible infrastructure.</p>
+<div class="tags"><span class="tag">Terraform</span><span class="tag">HCL</span><span class="tag">IaC</span></div>
+<div class="buttons"><a class="btn" href="https://github.com/sathwik-svg/terraform-local-project" target="_blank">GitHub →</a></div>
+</div>
+
+<div class="project-card">
+<h3>Cloud Project CI/CD</h3>
+<p>Automated application delivery using GitHub Actions, Docker and an Ubuntu-based deployment environment.</p>
+<div class="tags"><span class="tag">CI/CD</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">Linux</span></div>
+<div class="buttons"><a class="btn" href="https://github.com/sathwik-svg/cloud-project-cicd" target="_blank">GitHub →</a></div>
+</div>
+
+<div class="project-card">
+<h3>Docker Compose Multi-App</h3>
+<p>Multi-container application architecture using Docker Compose with application, database and service components.</p>
+<div class="tags"><span class="tag">Docker</span><span class="tag">Compose</span><span class="tag">Python</span><span class="tag">PostgreSQL</span></div>
+<div class="buttons"><a class="btn" href="https://github.com/sathwik-svg/docker-compose-multi-app" target="_blank">GitHub →</a></div>
+</div>
+
+<div class="project-card">
+<h3>Docker Flask Web App</h3>
+<p>Containerized Flask application demonstrating practical Docker development and deployment.</p>
+<div class="tags"><span class="tag">Docker</span><span class="tag">Flask</span><span class="tag">Python</span></div>
+<div class="buttons"><a class="btn" href="https://github.com/sathwik-svg/docker-flask-app" target="_blank">GitHub →</a></div>
+</div>
+
+<div class="project-card">
+<h3>Kubernetes Production Application</h3>
+<p>Container orchestration project using Kubernetes resources, PostgreSQL, Redis, secrets, configuration and persistent storage.</p>
+<div class="tags"><span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span></div>
+<div class="buttons"><a class="btn" href="https://github.com/sathwik-svg/project-12-kubernetes-production" target="_blank">GitHub →</a></div>
+</div>
 
 </section>
 
-<!-- DEGREE -->
-<section class="project-column degree">
-<div class="project-heading">
-<div class="project-heading-icon">🎓</div>
-<div>
-<h2>B.Tech Projects</h2>
-<p>Computer Science • Semester Projects</p>
-</div>
+<section class="project-section">
+<div class="section-heading">
+<div class="section-icon">🎓</div>
+<div><h2>B.Tech Projects</h2><p>Academic engineering portfolio</p></div>
 </div>
 
-<article class="project-card">
-<h3>S1 — Engineering Geometry Toolkit</h3>
-<p>Interactive engineering mathematics toolkit for solving and visualising common geometry calculations.</p>
-<div class="tags"><span class="tag">Engineering Mathematics</span><span class="tag">Web</span><span class="tag">JavaScript</span></div>
-<div class="project-actions"><a href="https://github.com/sathwik-svg/s1-engineering-geometry-toolkit" target="_blank">GitHub →</a><a href="https://s1-engineering-geometry-toolkit.onrender.com" target="_blank">Live Demo →</a></div>
-</article>
+<div class="project-card">
+<h3>S1 Engineering Geometry Toolkit</h3>
+<p>Engineering mathematics and geometry toolkit developed as a first-semester academic project.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">Mathematics</span><span class="tag">Engineering</span></div>
+<div class="buttons"><a class="btn" href="https://github.com/sathwik-svg/s1-engineering-geometry-toolkit" target="_blank">GitHub →</a><a class="btn demo" href="https://s1-engineering-geometry-toolkit.onrender.com" target="_blank">Live Demo ↗</a></div>
+</div>
 
-<article class="project-card">
-<h3>S2 — Python Student Management</h3>
-<p>Python-based student management application demonstrating programming fundamentals and data handling.</p>
-<div class="tags"><span class="tag">Python</span><span class="tag">Software Engineering</span></div>
-<div class="project-actions"><a href="https://github.com/sathwik-svg/s2-python-student-management" target="_blank">GitHub →</a></div>
-</article>
-
-<article class="project-card">
-<h3>S2 — Python Data Analysis Dashboard</h3>
-<p>Data analysis and visualisation project focused on transforming engineering data into useful insights.</p>
+<div class="project-card">
+<h3>S2 Engineering Data Toolkit</h3>
+<p>Engineering data processing and visualization project developed during Semester 2.</p>
 <div class="tags"><span class="tag">Python</span><span class="tag">Data Analysis</span><span class="tag">Visualization</span></div>
-<div class="project-actions"><a href="https://github.com/sathwik-svg/s2-python-data-analysis-dashboard" target="_blank">GitHub →</a></div>
-</article>
+<div class="buttons"><a class="btn" href="https://github.com/sathwik-svg/s2-engineering-data-toolkit" target="_blank">GitHub →</a><a class="btn demo" href="https://s2-engineering-data-toolkit.onrender.com" target="_blank">Live Demo ↗</a></div>
+</div>
 
-<article class="project-card">
-<h3>S2 — Boolean Logic Simulator</h3>
-<p>Interactive simulator for exploring Boolean logic, truth tables and fundamental digital logic concepts.</p>
-<div class="tags"><span class="tag">Logic</span><span class="tag">Computer Science</span><span class="tag">JavaScript</span></div>
-<div class="project-actions"><a href="https://github.com/sathwik-svg/s2-boolean-logic-simulator" target="_blank">GitHub →</a></div>
-</article>
+<div class="project-card">
+<h3>S2 Python Student Management</h3>
+<p>Student management application demonstrating Python programming and structured application design.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">CRUD</span><span class="tag">Management System</span></div>
+<div class="buttons"><a class="btn" href="https://github.com/sathwik-svg/s2-python-student-management" target="_blank">GitHub →</a></div>
+</div>
 
-<article class="project-card">
-<h3>S2 — Engineering Data Toolkit</h3>
-<p>Engineering-focused data toolkit developed as part of the second-semester project portfolio.</p>
-<div class="tags"><span class="tag">Python</span><span class="tag">Engineering</span><span class="tag">Data</span></div>
-<div class="project-actions"><a href="https://github.com/sathwik-svg/s2-engineering-data-toolkit" target="_blank">GitHub →</a><a href="https://s2-engineering-data-toolkit.onrender.com" target="_blank">Live Demo →</a></div>
-</article>
+<div class="project-card">
+<h3>S2 Boolean Logic Simulator</h3>
+<p>Interactive Boolean logic project covering digital logic concepts and computational reasoning.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">Boolean Logic</span><span class="tag">Engineering</span></div>
+<div class="buttons"><a class="btn" href="https://github.com/sathwik-svg/s2-boolean-logic-simulator" target="_blank">GitHub →</a></div>
+</div>
 
-<article class="project-card">
-<h3>S3 — Discrete Math Solver</h3>
-<p>Interactive solver for selected discrete mathematics problems and concepts.</p>
-<div class="tags"><span class="tag">Discrete Mathematics</span><span class="tag">Algorithms</span></div>
-<div class="project-actions"><a href="https://github.com/sathwik-svg/s3-discrete-math-solver" target="_blank">GitHub →</a><a href="https://s3-discrete-math-solver.onrender.com" target="_blank">Live Demo →</a></div>
-</article>
+<div class="project-card">
+<h3>S3 Discrete Math Solver</h3>
+<p>Programming toolkit for solving and demonstrating discrete mathematics concepts.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">Mathematics</span><span class="tag">Algorithms</span></div>
+<div class="buttons"><a class="btn" href="https://github.com/sathwik-svg/s3-discrete-math-solver" target="_blank">GitHub →</a><a class="btn demo" href="https://s3-discrete-math-solver.onrender.com" target="_blank">Live Demo ↗</a></div>
+</div>
 
-<article class="project-card">
-<h3>S3 — Java OOP Management System</h3>
-<p>Object-oriented management system demonstrating Java classes, inheritance, encapsulation and application design.</p>
+<div class="project-card">
+<h3>S3 Java OOP Management System</h3>
+<p>Java application demonstrating object-oriented programming, classes, inheritance and application design.</p>
 <div class="tags"><span class="tag">Java</span><span class="tag">OOP</span><span class="tag">Software Engineering</span></div>
-<div class="project-actions"><a href="https://github.com/sathwik-svg/s3-java-oop-management-system" target="_blank">GitHub →</a></div>
-</article>
+<div class="buttons"><a class="btn" href="https://github.com/sathwik-svg/s3-java-oop-management-system" target="_blank">GitHub →</a></div>
+</div>
 
-<article class="project-card">
-<h3>S3 — Data Structures Visualizer</h3>
-<p>Visual learning application demonstrating fundamental data structures and their operations.</p>
+<div class="project-card">
+<h3>S3 Data Structures Visualizer</h3>
+<p>Interactive visualization of fundamental data structures and algorithms.</p>
 <div class="tags"><span class="tag">Data Structures</span><span class="tag">Algorithms</span><span class="tag">Visualization</span></div>
-<div class="project-actions"><a href="https://github.com/sathwik-svg/s3-data-structures-visualizer" target="_blank">GitHub →</a><a href="https://s3-data-structures-visualizer.onrender.com" target="_blank">Live Demo →</a></div>
-</article>
+<div class="buttons"><a class="btn" href="https://github.com/sathwik-svg/s3-data-structures-visualizer" target="_blank">GitHub →</a><a class="btn demo" href="https://s3-data-structures-visualizer.onrender.com" target="_blank">Live Demo ↗</a></div>
+</div>
 
-<article class="project-card">
-<h3>S3 — Computer Architecture Simulator</h3>
-<p>Simulator project exploring computer architecture concepts and fundamental system components.</p>
-<div class="tags"><span class="tag">Computer Architecture</span><span class="tag">Systems</span></div>
-<div class="project-actions"><a href="https://github.com/sathwik-svg/s3-computer-architecture-simulator" target="_blank">GitHub →</a><a href="https://s3-computer-architecture-simulator.onrender.com" target="_blank">Live Demo →</a></div>
-</article>
+<div class="project-card">
+<h3>S3 Computer Architecture Simulator</h3>
+<p>Academic simulator exploring computer architecture concepts and system-level computation.</p>
+<div class="tags"><span class="tag">Computer Architecture</span><span class="tag">CSE</span><span class="tag">Simulation</span></div>
+<div class="buttons"><a class="btn" href="https://github.com/sathwik-svg/s3-computer-architecture-simulator" target="_blank">GitHub →</a><a class="btn demo" href="https://s3-computer-architecture-simulator.onrender.com" target="_blank">Live Demo ↗</a></div>
+</div>
 
-<article class="project-card">
-<h3>S3 — Software Engineering Project Tracker</h3>
-<p>Web application for managing and tracking software engineering projects, deployed as a live application.</p>
-<div class="tags"><span class="tag">Software Engineering</span><span class="tag">Web</span><span class="tag">Database</span></div>
-<div class="project-actions"><a href="https://github.com/sathwik-svg/s3-software-engineering-project-tracker" target="_blank">GitHub →</a><a href="https://s3-software-engineering-project-tracker.onrender.com" target="_blank">Live Demo →</a></div>
-</article>
+<div class="project-card">
+<h3>S3 Software Engineering Project Tracker</h3>
+<p>Web application for tracking software engineering projects, students and development progress.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">PostgreSQL</span><span class="tag">Software Engineering</span></div>
+<div class="buttons"><a class="btn" href="https://github.com/sathwik-svg/s3-software-engineering-project-tracker" target="_blank">GitHub →</a><a class="btn demo" href="https://s3-software-engineering-project-tracker.onrender.com" target="_blank">Live Demo ↗</a></div>
+</div>
 
 </section>
 </div>
+
+<div class="all-projects">
+<a href="https://github.com/sathwik-svg?tab=repositories" target="_blank">View All 32+ GitHub Repositories →</a>
+</div>
+
 </div>
 </main>
 
 <footer>
 <div class="footer-left">&copy; <span id="year">2026</span> Sathwik Ganji. All rights reserved.</div>
 <div class="socials">
-<a href="https://github.com/sathwik-svg" target="_blank" rel="noopener noreferrer">GitHub</a>
-<a href="https://www.linkedin.com/in/sathwik-svg/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a href="https://github.com/sathwik-svg" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/sathwik-svg/" target="_blank">LinkedIn</a>
 </div>
 </footer>
 
