@@ -1,5 +1,5 @@
 (function () {
-  const WEBHOOK_URL = "http://192.168.204.130:5678/webhook-test/portfolio-ai";
+  const WEBHOOK_URL = "https://server-celebrity-hospitality-voting.trycloudflare.com/webhook/portfolio-ai";
 
   const button = document.createElement("button");
   button.id = "ai-assistant-button";
