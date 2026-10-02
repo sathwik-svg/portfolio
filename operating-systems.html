@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Operating Systems | Sathwik Ganji</title>
+
+<meta name="description"
+content="Operating Systems knowledge and troubleshooting reference covering Windows, Linux and macOS by Sathwik Ganji.">
+
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<style>
+.os-intro{
+    text-align:center;
+    max-width:850px;
+    margin:0 auto 55px;
+}
+
+.os-intro p{
+    line-height:1.8;
+    opacity:.72;
+}
+
+.os-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.os-card{
+    padding:30px;
+    border:1px solid rgba(120,180,255,.18);
+    border-radius:24px;
+    background:rgba(255,255,255,.025);
+    transition:.35s;
+    position:relative;
+    overflow:hidden;
+}
+
+.os-card:hover{
+    transform:translateY(-8px);
+    border-color:rgba(120,180,255,.45);
+    box-shadow:0 18px 45px rgba(40,100,200,.14);
+}
+
+.os-icon{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.os-card h2{
+    margin:0 0 8px;
+}
+
+.os-card > p{
+    line-height:1.7;
+    opacity:.7;
+    font-size:.9rem;
+}
+
+.os-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:20px 0;
+}
+
+.os-tag{
+    padding:6px 10px;
+    border-radius:20px;
+    font-size:.72rem;
+    border:1px solid rgba(120,180,255,.2);
+}
+
+.os-list{
+    list-style:none;
+    padding:0;
+    margin:20px 0;
+}
+
+.os-list li{
+    padding:8px 0;
+    opacity:.75;
+    font-size:.85rem;
+}
+
+.os-list li::before{
+    content:"✓";
+    margin-right:9px;
+    opacity:.8;
+}
+
+.os-btn{
+    display:inline-block;
+    padding:10px 15px;
+    border-radius:9px;
+    text-decoration:none;
+    font-size:.8rem;
+    font-weight:600;
+    border:1px solid rgba(120,180,255,.25);
+    transition:.25s;
+}
+
+.os-btn:hover{
+    transform:translateY(-2px);
+}
+
+@media(max-width:900px){
+    .os-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar" id="navbar">
+<div class="nav-container">
+
+<a href="index.html" class="nav-brand">SG.</a>
+
+<div class="nav-links" id="nav-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="projects.html">Projects</a>
+<a href="operating-systems.html" class="active">Operating Systems</a>
+<a href="resume.html">Resume</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<div class="nav-controls">
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">☀</button>
+<button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">☰</button>
+</div>
+
+</div>
+</nav>
+
+
+<main class="page-main">
+
+<div class="page-container">
+
+<div class="os-intro">
+
+<h1 class="page-title">Operating Systems.</h1>
+
+<p>
+Practical systems knowledge across Windows, Linux and macOS,
+with a focus on troubleshooting, networking, administration,
+automation and cloud infrastructure.
+</p>
+
+</div>
+
+
+<div class="os-grid">
+
+
+<!-- WINDOWS -->
+
+<section class="os-card">
+
+<div class="os-icon">🪟</div>
+
+<h2>Windows</h2>
+
+<p>
+Windows administration, troubleshooting, networking,
+PowerShell and system maintenance.
+</p>
+
+<div class="os-tags">
+<span class="os-tag">CMD</span>
+<span class="os-tag">PowerShell</span>
+<span class="os-tag">Windows 11</span>
+</div>
+
+<ul class="os-list">
+<li>System troubleshooting</li>
+<li>Network diagnostics</li>
+<li>Windows Update</li>
+<li>Services & processes</li>
+<li>Storage & disk tools</li>
+<li>Drivers & devices</li>
+</ul>
+
+<a class="os-btn" href="https://learn.microsoft.com/windows/" target="_blank">
+Microsoft Windows Docs →
+</a>
+
+</section>
+
+
+<!-- LINUX -->
+
+<section class="os-card">
+
+<div class="os-icon">🐧</div>
+
+<h2>Linux</h2>
+
+<p>
+Linux administration with practical experience in Ubuntu Server,
+SSH, networking, Docker and cloud infrastructure.
+</p>
+
+<div class="os-tags">
+<span class="os-tag">Ubuntu</span>
+<span class="os-tag">Bash</span>
+<span class="os-tag">SSH</span>
+<span class="os-tag">Docker</span>
+</div>
+
+<ul class="os-list">
+<li>Ubuntu Server administration</li>
+<li>Linux troubleshooting</li>
+<li>SSH & networking</li>
+<li>Package management</li>
+<li>Services & systemd</li>
+<li>Docker & containers</li>
+</ul>
+
+<a class="os-btn" href="https://ubuntu.com/server/docs" target="_blank">
+Ubuntu Server Docs →
+</a>
+
+</section>
+
+
+<!-- MACOS -->
+
+<section class="os-card">
+
+<div class="os-icon">🍎</div>
+
+<h2>macOS</h2>
+
+<p>
+macOS command-line concepts, system tools, networking,
+storage and administration fundamentals.
+</p>
+
+<div class="os-tags">
+<span class="os-tag">Terminal</span>
+<span class="os-tag">Unix</span>
+<span class="os-tag">Networking</span>
+</div>
+
+<ul class="os-list">
+<li>Terminal commands</li>
+<li>System troubleshooting</li>
+<li>Network diagnostics</li>
+<li>Storage management</li>
+<li>Processes & services</li>
+<li>System administration</li>
+</ul>
+
+<a class="os-btn" href="https://support.apple.com/macos" target="_blank">
+Apple macOS Support →
+</a>
+
+</section>
+
+
+</div>
+
+</div>
+
+</main>
+
+
+<footer>
+
+<div class="footer-left">
+&copy; <span id="year">2026</span> Sathwik Ganji. All rights reserved.
+</div>
+
+<div class="socials">
+
+<a href="https://github.com/sathwik-svg" target="_blank">
+GitHub
+</a>
+
+<a href="https://www.linkedin.com/in/sathwik-sathwik-a69929357/" target="_blank">
+LinkedIn
+</a>
+
+</div>
+
+</footer>
+
+
+<script src="assets/js/scripts.js"></script>
+
+</body>
