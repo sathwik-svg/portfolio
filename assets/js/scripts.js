@@ -160,3 +160,183 @@ fetch("https://api.github.com/users/sathwik-svg/repos?sort=updated&per_page=100"
       container.innerHTML = "<p>GitHub projects could not be loaded.</p>";
     }
   });
+
+
+/* =========================================================
+   PORTFOLIO MOTION ENGINE
+   ========================================================= */
+
+(() => {
+  const reducedMotion =
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Lightweight background particles */
+  if (
+    !reducedMotion &&
+    !document.getElementById("portfolio-particles")
+  ) {
+    const field = document.createElement("div");
+
+    field.id = "portfolio-particles";
+    field.setAttribute("aria-hidden", "true");
+
+    const count = window.innerWidth <= 768 ? 8 : 16;
+
+    for (let i = 0; i < count; i++) {
+      const particle = document.createElement("span");
+
+      particle.className = "portfolio-particle";
+
+      particle.style.left =
+        Math.random() * 100 + "%";
+
+      particle.style.setProperty(
+        "--particle-duration",
+        10 + Math.random() * 12 + "s"
+      );
+
+      particle.style.setProperty(
+        "--particle-delay",
+        -Math.random() * 14 + "s"
+      );
+
+      particle.style.opacity =
+        (0.10 + Math.random() * 0.18).toFixed(2);
+
+      field.appendChild(particle);
+    }
+
+    document.body.prepend(field);
+  }
+
+  /* Scroll reveal */
+  const revealSelectors = [
+    ".page-container > *",
+    ".project-card",
+    ".project-section",
+    ".exp-item",
+    ".info-item",
+    ".contact-card",
+    ".resume-container",
+    ".carousel",
+    ".credentials-section",
+    "footer"
+  ];
+
+  const revealItems =
+    document.querySelectorAll(
+      revealSelectors.join(",")
+    );
+
+  revealItems.forEach((element, index) => {
+    element.classList.add("scroll-reveal");
+
+    element.style.setProperty(
+      "--reveal-delay",
+      Math.min((index % 6) * 70, 350) + "ms"
+    );
+  });
+
+  if (
+    reducedMotion ||
+    !("IntersectionObserver" in window)
+  ) {
+    revealItems.forEach((element) => {
+      element.classList.add("is-visible");
+    });
+  } else {
+    const observer =
+      new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            entry.target.classList.add(
+              "is-visible"
+            );
+
+            obs.unobserve(entry.target);
+          });
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px 0px -45px 0px"
+        }
+      );
+
+    revealItems.forEach((element) => {
+      observer.observe(element);
+    });
+  }
+
+  /* Optional animated counters */
+  document
+    .querySelectorAll("[data-count]")
+    .forEach((element) => {
+      const target =
+        Number(element.dataset.count);
+
+      if (!Number.isFinite(target)) return;
+
+      const suffix =
+        element.dataset.suffix || "";
+
+      if (reducedMotion) {
+        element.textContent =
+          target + suffix;
+        return;
+      }
+
+      let started = false;
+
+      const counterObserver =
+        new IntersectionObserver(
+          (entries, obs) => {
+            if (
+              !entries[0].isIntersecting ||
+              started
+            ) {
+              return;
+            }
+
+            started = true;
+
+            const start =
+              performance.now();
+
+            const duration = 1200;
+
+            const tick = (now) => {
+              const progress =
+                Math.min(
+                  (now - start) /
+                    duration,
+                  1
+                );
+
+              const eased =
+                1 -
+                Math.pow(
+                  1 - progress,
+                  3
+                );
+
+              element.textContent =
+                Math.round(
+                  target * eased
+                ) + suffix;
+
+              if (progress < 1) {
+                requestAnimationFrame(tick);
+              }
+            };
+
+            requestAnimationFrame(tick);
+            obs.disconnect();
+          }
+        );
+
+      counterObserver.observe(element);
+    });
+})();
+
